@@ -1,1 +1,5 @@
 imbalanced-learn
+pandas
+pydantic
+fastapi
+pickle
