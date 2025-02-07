@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Define paths for model and scaler
-BASE_DIR = "D:/credit_card_fraud_detection_deployment/artifacts"
+BASE_DIR = os.path.join(os.getcwd(), "artifacts")
 MODEL_PATH = os.path.join(BASE_DIR, "random_forest_model.pkl")
 SCALER_PATH = os.path.join(BASE_DIR, "scaler.pkl")  
 
@@ -94,5 +94,6 @@ def predict_transaction(transaction: TransactionData):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
 

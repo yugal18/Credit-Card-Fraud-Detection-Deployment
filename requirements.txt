@@ -2,3 +2,5 @@ imbalanced-learn
 pandas
 pydantic
 fastapi
+uvicorn
+scikit-learn
