@@ -8,13 +8,13 @@ This project focuses on detecting fraudulent credit card transactions using mach
 credit_card_fraud_detection/
 |-- __pycache__/               # Compiled Python files
 |-- artifacts/                 # Saved models and other artifacts
-|-- random_forest_model.pkl    # Trained Random Forest model
-|-- scaler.pkl                 # Saved scaler for feature normalization
-|-- notebook/                  # Jupyter Notebooks for exploration and analysis
-|-- creditcardfraud.ipynb      # Main notebook with data analysis and modeling
+    -- random_forest_model.pkl    # Trained Random Forest model
+    -- scaler.pkl                 # Saved scaler for feature normalization
+|-- notebook/                  # Jupyter Notebooks for exploration analysis.
+    -- creditcardfraud.ipynb      # Main notebook with data analysis, modeling, and evaluation.
 |-- Dockerfile                 # Docker configuration for containerization
 |-- README.md                  # Project documentation
-|-- app.py                     # Flask API for model inference
+|-- app.py                     # FastAPI for model inference 
 |-- requirements.txt            # Python dependencies
 ```
 
@@ -50,7 +50,7 @@ jupyter notebook creditcardfraud.ipynb
 ### Running the API
 Start the FastAPI to serve the model:
 ```sh
-python app.py
+python app.py or uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 ### Using Docker
