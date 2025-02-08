@@ -3,6 +3,32 @@
 ## Overview
 This project focuses on detecting fraudulent credit card transactions using machine learning techniques. The dataset used contains transactions labeled as fraudulent or legitimate, and the goal is to build a predictive model to classify transactions accurately.
 
+
+## Goal : 1) Supervised(Classification) Machine Learning Task
+
+## 2) We want to avoid false negatives as much as possible and will do that using the RECALL metric.
+
+## Dataset Overview
+The dataset contains 284,807 transactions.
+
+It is highly imbalanced, meaning the number of fraudulent transactions (Class = 1) is significantly lower than the number of non-fraudulent ones (Class = 0).
+
+The dataset is useful for fraud detection models that classify transactions as either fraudulent (1) or non-fraudulent (0).
+
+## Columns Explanation
+
+Time: The time elapsed (in seconds) since the first transaction in the dataset.
+
+V1 to V28: These are anonymized features obtained via Principal Component Analysis (PCA) for privacy reasons. They contain numerical values that represent transformed transaction details.
+
+Amount: The transaction amount in currency units.
+
+Class: The target variable: 0 → Legitimate transaction 1 → Fraudulent transaction
+
+## Key Points
+
+The features V1 to V28 are not directly interpretable due to PCA transformation. The dataset is imbalanced, meaning special techniques like SMOTE (Synthetic Minority Over-sampling Technique), undersampling, or cost-sensitive learning may be required for model training.
+
 ## Project Structure
 ```
 credit_card_fraud_detection/
